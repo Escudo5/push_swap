@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/18 18:07:31 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:10:01 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include <limits.h>
 #include "../libft/libft_tuneada/custom-libft/libft.h"
-#include "/../ft_printf/ft_printf/ft_printf.h"
+#include "../ft_printf/ft_printf/ft_printf.h"
 
 typedef struct s_stack_node
 {
