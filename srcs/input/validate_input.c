@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:22:45 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 12:09:57 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 14:57:55 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,6 @@ bool	is_valid(char *str)
 	return (is_numeric(str) && is_in_range(str));
 }
 
-int	*create_number_array(char **input, int len)
-{
-	int	*numbers;
-	int	i;
-
-	numbers = malloc(sizeof(int) * len);
-	if (!numbers)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		numbers[i] = ft_atoi(input[i]);
-		i++;
-	}
-	return (numbers);
-}
 
 bool	has_dup(int *numbers, int len)
 {
@@ -79,4 +63,21 @@ bool	check_dup(char **input)
 	}
 	free(numbers);
 	return (false);
+}
+
+int	*create_number_array(char **input, int len)
+{
+	int	*numbers;
+	int	i;
+
+	numbers = malloc(sizeof(int) * len);
+	if (!numbers)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		numbers[i] = ft_atoi(input[i]);
+		i++;
+	}
+	return (numbers);
 }
