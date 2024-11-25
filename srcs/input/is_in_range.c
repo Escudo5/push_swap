@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:31:54 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 11:11:06 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 12:11:17 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 bool	is_in_range(const char *str)
 {
-	long num;
-	num = ft_atol(str);
+	long	num;
 
+	num = ft_atol(str);
 	return (num >= INT_MIN && num <= INT_MAX);
 }

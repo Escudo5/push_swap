@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:26:50 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 11:11:10 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 12:11:41 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 bool	is_numeric(const char *str)
 {
-	int i;
+	int	i;
 	i = 0;
+	
 	while (str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
@@ -26,5 +27,5 @@ bool	is_numeric(const char *str)
 			return (false);
 		i++;
 	}
-	return (true);
+	return(true);
 }
