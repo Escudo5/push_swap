@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atol.c                                             :+:      :+:    :+:   */
+/*   is_dup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 15:06:50 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 10:35:49 by smarquez         ###   ########.fr       */
+/*   Created: 2024/11/25 10:37:30 by smarquez          #+#    #+#             */
+/*   Updated: 2024/11/25 10:40:28 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "push_swap.h"
 
-static long	ft_atol(const char *nptr)
+bool is_dup(int *numbers, int len)
 {
-	long	sign;
-	int	result;
-
-	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\v'
-		|| *nptr == '\f' || *nptr == '\r')
-		nptr++;
-	sign = 1;
-	if (*nptr == '-')
-	{
-		sign = -1;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	result = 0;
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		result = result * 10 + (*nptr - '0');
-		nptr++;
-	}
-	return (sign * result);
+    int i;
+    int j;
+    
+    i = 0;
+    while (i < len)
+    {
+        j = i + 1;
+        while (j < len)
+        {
+            if (numbers[i] == numbers[j])
+                return (true);
+            j++;
+        }
+        i++;
+    }
+    return (false);
 }
