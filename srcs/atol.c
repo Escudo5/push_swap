@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:06:50 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 10:35:49 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 11:11:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static long	ft_atol(const char *nptr)
 {
 	long	sign;
-	int	result;
+	int		result;
 
 	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\v'
 		|| *nptr == '\f' || *nptr == '\r')

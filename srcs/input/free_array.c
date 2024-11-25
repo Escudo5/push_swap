@@ -6,20 +6,20 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:53:50 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 10:55:00 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 11:10:58 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    free_array(char **array)
+void	free_array(char **array)
 {
-    int i;
-    i = 0;
-    while (array[i])
-    {
-        free(array[i]);
-        i++;
-    }
-    free(array);
+	int i;
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }

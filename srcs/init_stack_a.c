@@ -5,7 +5,7 @@
 static long	ft_atol(const char *nptr)
 {
 	long	sign;
-	int	result;
+	int		result;
 
 	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\v'
 		|| *nptr == '\f' || *nptr == '\r')
@@ -27,42 +27,40 @@ static long	ft_atol(const char *nptr)
 	return (sign * result);
 }
 
-static void append_node(t_stack_node **stack, int n)
+static void	append_node(t_stack_node **stack, int n)
 {
-    t_stack_node    *node;
-    t_stack_node    *last_node;
+	t_stack_node	*node;
+	t_stack_node	*last_node;
 
-    if (!stack)
-        return;
-    node = malloc(sizeof(t_stack_node));
-    if(!node)
-        return ;
-    node ->next = NULL;
-    node->nbr = n;
-    if (!(*stack))
-    {
-        *stack = node;
-        node->prev = NULL;
-    }
-    else
-    {
-        last_node = find_last(*stack);
-        last_node->next = node;
-        node->prev = last_node;
-    }
+	if (!stack)
+		return ;
+	node = malloc(sizeof(t_stack_node));
+	if (!node)
+		return ;
+	node->next = NULL;
+	node->nbr = n;
+	if (!(*stack))
+	{
+		*stack = node;
+		node->prev = NULL;
+	}
+	else
+	{
+		last_node = find_last(*stack);
+		last_node->next = node;
+		node->prev = last_node;
+	}
 }
 
-
-void    init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node **a, char **argv)
 {
-    long    n;
-    int i;
-    i = 0;
-    while(argv[i])
-    {
-        if (error_syntax(argv[i]))
-            free_errors(a);
-        n = ft_atol(argv[i]);
-
-    }
+	long n;
+	int i;
+	i = 0;
+	while (argv[i])
+	{
+		if (error_syntax(argv[i]))
+			free_errors(a);
+		n = ft_atol(argv[i]);
+	}
 }

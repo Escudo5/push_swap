@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 10:03:27 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/19 15:20:23 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 11:11:39 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static char	**ft_free(char **result, size_t fail_pos)
 {
-	size_t		i;
+	size_t	i;
 
 	if (fail_pos > 0)
 	{
 		i = fail_pos - 1;
 		while (i > 0)
 		{
-			free (result[i--]);
+			free(result[i--]);
 		}
 		free(result[0]);
 	}
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			result[i++] = get_next_word(s, c);
-			if (!result [i - 1])
+			if (!result[i - 1])
 				return (ft_free(result, i - 1));
 		}
 		while (*s && *s != c)
@@ -88,16 +88,17 @@ char	**ft_split(char const *s, char c)
 }
 /*
 #include <stdio.h>
+
 int	main(void)
 {
-	const char *s;
-	s = "Hola Mudo que tal";
-	char c;
-	c = ' ';
-	char	**result;
-	int i;
-	i = 0;
+	const char	*s;
+	char		c;
+	char		**result;
+	int			i;
 
+	s = "Hola Mudo que tal";
+	c = ' ';
+	i = 0;
 	result = ft_split(s, c);
 	while (result[i] != NULL)
 	{
