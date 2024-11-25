@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 17:29:01 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/25 18:46:00 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,8 @@ void					sb(t_stack_node **b);
 void					pa(t_stack_node **a, t_stack_node **b);
 void					pb(t_stack_node **a, t_stack_node **b);
 void					ss(t_stack_node **a, t_stack_node **b);
+void					ra(t_stack_node **a);
+void					rb(t_stack_node **b);
+void					rr(t_stack_node **a, t_stack_node **b);
 
 #endif

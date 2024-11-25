@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 17:30:26 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 18:41:05 by smarquez         ###   ########.fr       */
+/*   Created: 2024/11/25 18:34:18 by smarquez          #+#    #+#             */
+/*   Updated: 2024/11/25 18:41:28 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack_node **a)
+void	rb(t_stack_node **b)
 {
-	t_stack_node	*first;
-	t_stack_node	*last;
+	t_stack_node *first;
+	t_stack_node *last;
 
-	if (*a == NULL || (*a)->next == NULL)
+	if (*b == NULL || (*b)->next == NULL)
 		return ;
-	first = *a;
-	*a = (*a)->next;
-	(*a)->prev = NULL;
-	last = *a;
+	first = *b;
+	*b = (*b)->next;
+	(*b)->prev = NULL;
+	last = *b;
 	while (last->next != NULL)
 		last = last->next;
 	last->next = first;
