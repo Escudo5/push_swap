@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 19:20:23 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:20:28 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,12 @@ void					rr(t_stack_node **a, t_stack_node **b);
 void					rra(t_stack_node **a);
 void					rrb(t_stack_node **b);
 void					rrr(t_stack_node **a, t_stack_node **b);
+void					index(t_stack_node **a);
+bool					unindexed(t_stack_node *a);
+t_stack_node			*find_smallest_unindexed(t_stack_node *a);
+int	find_largest_index(t_stack_node *b);
+void	move_largest_to_top(t_stack_node **b, int largest_index);
+void	push_to_a(t_stack_node **a, t_stack_node **b);
+
 
 #endif

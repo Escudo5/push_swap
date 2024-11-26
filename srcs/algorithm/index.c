@@ -6,25 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 10:35:26 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/26 11:05:47 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:25:25 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	index(t_stack_node **a)
-{
-	t_stack_node	*smallest_node;
-	int				current_index;
-
-	current_index = 0;
-	while (unindexed(*a))
-	{
-		smallest_node = find_smallest_unindexed(*a);
-		smallest_node->index = current_index;
-		current_index++;
-	}
-}
 
 bool	unindexed(t_stack_node *a)
 {
@@ -39,7 +25,7 @@ bool	unindexed(t_stack_node *a)
 
 t_stack_node	*find_smallest_unindexed(t_stack_node *a)
 {
-	t_stack_node *smallest_node;
+	t_stack_node	*smallest_node;
 
 	smallest_node = NULL;
 	while (a)
@@ -49,4 +35,18 @@ t_stack_node	*find_smallest_unindexed(t_stack_node *a)
 		a = a->next;
 	}
 	return (smallest_node);
+}
+
+void	index(t_stack_node **a)
+{
+	t_stack_node	*smallest_node;
+	int				current_index;
+
+	current_index = 0;
+	while (unindexed(*a))
+	{
+		smallest_node = find_smallest_unindexed(*a);
+		smallest_node->index = current_index;
+		current_index++;
+	}
 }
