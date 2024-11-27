@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 16:50:02 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:55:15 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,13 @@ void					sa(t_stack_node **a, bool print);
 void					sb(t_stack_node **b, bool print);
 void					pa(t_stack_node **a, t_stack_node **b, bool print);
 void					pb(t_stack_node **a, t_stack_node **b, bool print);
-void					ss(t_stack_node **a, t_stack_node **b);
+void					ss(t_stack_node **a, t_stack_node **b, bool print);
 void					ra(t_stack_node **a, bool print);
 void					rb(t_stack_node **b, bool print);
 void					rr(t_stack_node **a, t_stack_node **b, bool print);
-void					rra(t_stack_node **a);
-void					rrb(t_stack_node **b);
-void					rrr(t_stack_node **a, t_stack_node **b);
+void					rra(t_stack_node **a, bool print);
+void					rrb(t_stack_node **b, bool print);
+void					rrr(t_stack_node **a, t_stack_node **b, bool print);
 void					index(t_stack_node **a);
 bool					unindexed(t_stack_node *a);
 t_stack_node			*find_smallest_unindexed(t_stack_node *a);
@@ -61,8 +61,9 @@ int						find_largest_index(t_stack_node *b);
 void					move_largest_to_top(t_stack_node **b,
 							int largest_index);
 void					push_to_a(t_stack_node **a, t_stack_node **b);
-bool	stack_sorted(t_stack_node *stack);
-void free_stack(t_stack_node **a);
-
+bool					stack_sorted(t_stack_node *stack);
+void					free_stack(t_stack_node **a);
+void					sort_three(t_stack_node **a);
+t_stack_node	*find_max(t_stack_node **a);
 
 #endif

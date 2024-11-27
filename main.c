@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:15 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 13:56:09 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:07:00 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int	main(int argc, char **argv)
 	init_stack_a(&a, numbers, len);
 	if (!stack_sorted(a))
 	{
-		if (stack_len(a) == 2)
+		if (get_len(a) == 2)
 			sa(&a, false);
-		else if (stack_len(a) == 3)
+		else if (get_len(a) == 3)
 			sort_three(&a);
 		else
 			sort_stacks(&a, &b);
