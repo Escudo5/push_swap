@@ -6,13 +6,13 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:30:26 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 18:41:05 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:47:57 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack_node **a)
+void	ra(t_stack_node **a, bool print)
 {
 	t_stack_node	*first;
 	t_stack_node	*last;
@@ -28,4 +28,6 @@ void	ra(t_stack_node **a)
 	last->next = first;
 	first->prev = last;
 	first->next = NULL;
+	if (print)
+        ft_putstr_fd("pa\n", 1);
 }

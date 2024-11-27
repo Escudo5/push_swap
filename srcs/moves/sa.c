@@ -6,13 +6,13 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:46:12 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 16:11:55 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:44:39 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack_node **a)
+void	sa(t_stack_node **a, bool print)
 {
 	t_stack_node	*node1;
 	t_stack_node	*node2;
@@ -28,4 +28,6 @@ void	sa(t_stack_node **a)
 	node2->next = node1;
 	node1->prev = node2;
 	*a = node2;
+	if (print)
+		ft_putstr_fd("sa\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:15 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 11:11:52 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/27 13:56:09 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,27 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack_node *a;
-	t_stack_node *b;
+	t_stack_node	*a;
+	t_stack_node	*b;
+	char			**input;
+	int				*numbers;
+	int				len;
 
 	a = NULL;
 	b = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
+	if (argc < 2)
 		return (1);
-	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	init_stack_a(&a, argv + 1);
+	input = split_input(argc, argv);
+	if (check_dup(input))
+	{
+		ft_putstr_fd("Error: Duplicates found in input.\n", 2);
+		return (1);
+	}
+	len = 0;
+	while (input[len])
+		len++;
+	numbers = create_number_array(input, len);
+	init_stack_a(&a, numbers, len);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)

@@ -6,24 +6,30 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:22:45 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 14:57:55 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/27 13:08:23 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	**split_input(int argc, char **argv)
+char	**split_input(int argc, char **argv, int *len)
 {
+	char	**input;
+
 	if (argc == 2)
-		return (ft_split(argv[1], ' '));
-	return (argv + 1);
+		input = ft_split(argv[1], ' ');
+	else
+		input = argv + 1;
+	*len = 0;
+	while (input[*len])
+		(*len)++;
+	return (input);
 }
 
 bool	is_valid(char *str)
 {
 	return (is_numeric(str) && is_in_range(str));
 }
-
 
 bool	has_dup(int *numbers, int len)
 {
@@ -45,26 +51,6 @@ bool	has_dup(int *numbers, int len)
 	return (false);
 }
 
-bool	check_dup(char **input)
-{
-	int	*numbers;
-	int	len;
-
-	len = 0;
-	while (input[len])
-		len++;
-	numbers = create_number_array(input, len);
-	if (!numbers)
-		return (true);
-	if (has_dup(numbers, len))
-	{
-		free(numbers);
-		return (true);
-	}
-	free(numbers);
-	return (false);
-}
-
 int	*create_number_array(char **input, int len)
 {
 	int	*numbers;
@@ -76,8 +62,29 @@ int	*create_number_array(char **input, int len)
 	i = 0;
 	while (i < len)
 	{
+		if (!is_valid(input[i]))
+		{
+			free(numbers);
+			return (NULL);
+		}
 		numbers[i] = ft_atoi(input[i]);
 		i++;
 	}
 	return (numbers);
+}
+
+bool	check_dup(char **input, int len)
+{
+	int	*numbers;
+
+	numbers = create_number_array(input, len);
+	if (!numbers)
+		return (true);
+	if (has_dup(numbers, len))
+	{
+		free(numbers);
+		return (true);
+	}
+	free(numbers);
+	return (false);
 }

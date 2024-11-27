@@ -2,71 +2,49 @@
 
 #include "push_swap.h"
 
-static long	ft_atol(const char *nptr)
+t_stack_node	*find_last(t_stack_node *a)
 {
-	long	sign;
-	int		result;
-
-	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\v'
-		|| *nptr == '\f' || *nptr == '\r')
-		nptr++;
-	sign = 1;
-	if (*nptr == '-')
-	{
-		sign = -1;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	result = 0;
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		result = result * 10 + (*nptr - '0');
-		nptr++;
-	}
-	return (sign * result);
+	if (!a)
+		return ;
+	while (a->next)
+		a = a->next;
+	return (a);
 }
 
-static void	append_node(t_stack_node **stack, int n)
+static void	append_node(t_stack_node **a, int n)
 {
 	t_stack_node	*node;
 	t_stack_node	*last_node;
 
-	if (!stack)
+	if (!a)
 		return ;
 	node = malloc(sizeof(t_stack_node));
 	if (!node)
 		return ;
-		node->nbr = n;
-		node->index = -1;
-
-	node->next = NULL;
 	node->nbr = n;
-	if (!(*stack))
+	node->index = -1;
+	node->next = NULL;
+	if (!(*a))
 	{
-		*stack = node;
+		*a = node;
 		node->prev = NULL;
 	}
 	else
 	{
-		last_node = find_last(*stack);
+		last_node = find_last(*a);
 		last_node->next = node;
 		node->prev = last_node;
 	}
 }
 
-void	init_stack_a(t_stack_node **a, int *numbers)
+void	init_stack_a(t_stack_node **a, int *numbers, int len)
 {
-	
-	t_stack_node *a;
-	a = NULL;
-
 	int i;
+
 	i = 0;
-	while (argv[i])
+	while (i < len)
 	{
-		if (error_syntax(argv[i]))
-			free_errors(a);
-		n = ft_atol(argv[i]);
+		append_node(a, numbers[i]);
+		i++;
 	}
 }
