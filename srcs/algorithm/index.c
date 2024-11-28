@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 10:35:26 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/26 16:25:25 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/28 13:22:06 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_stack_node	*find_smallest_unindexed(t_stack_node *a)
 	return (smallest_node);
 }
 
-void	index(t_stack_node **a)
+void	index_n(t_stack_node **a)
 {
 	t_stack_node	*smallest_node;
 	int				current_index;

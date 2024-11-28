@@ -6,15 +6,17 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 12:47:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 12:48:15 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/28 13:38:08 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int get_len(char **input)
+#include "push_swap.h"
+
+int get_len(t_stack_node **a)
 {
     int len;
     len = 0;
-    while(input[len])
+    while(a[len])
     {
         len++;
     }

@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:03 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 17:26:51 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/28 13:09:44 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void	push_range_to_b(t_stack_node **a, t_stack_node **b, int start, int end)
 	}
 }
 
-
-
 void	sort_stacks(t_stack_node **a, t_stack_node **b)
 {
 	int	total_numbers;
@@ -64,4 +62,3 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 	}
 	push_to_a(a, b);
 }
-

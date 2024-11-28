@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 12:28:19 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/28 13:38:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,16 @@ typedef struct s_stack_node
 }						t_stack_node;
 
 void					init_stack_a(t_stack_node **a, int *numbers,
-							char **argv);
+							int len);
+static void				append_node(t_stack_node **a, int n);
+t_stack_node			*find_last(t_stack_node *a);
 static long				ft_atol(const char *nptr);
-char					**split_input(int argc, char **argv);
+char					**split_input(int argc, char **argv, int *len);
 bool					is_valid(char *str);
 bool					has_dup(int *numbers, int len);
 int						*create_number_array(char **input, int len);
-bool					check_dup(char **input);
-int						validate_input(int argc, char **argv);
-int						get_len(char **input);
+bool					check_dup(char **input, int len);
+int						get_len(t_stack_node **a);
 bool					is_numeric(const char *str);
 bool					is_dup(int *numbers, int len);
 bool					is_in_range(const char *str);
@@ -55,7 +56,7 @@ void					rr(t_stack_node **a, t_stack_node **b, bool print);
 void					rra(t_stack_node **a, bool print);
 void					rrb(t_stack_node **b, bool print);
 void					rrr(t_stack_node **a, t_stack_node **b, bool print);
-void					index(t_stack_node **a);
+void					index_n(t_stack_node **a);
 bool					unindexed(t_stack_node *a);
 t_stack_node			*find_smallest_unindexed(t_stack_node *a);
 int						find_largest_index(t_stack_node *b);
