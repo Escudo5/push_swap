@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 17:55:15 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:28:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int						get_len(char **input);
 bool					is_numeric(const char *str);
 bool					is_dup(int *numbers, int len);
 bool					is_in_range(const char *str);
+void					sort_stacks(t_stack_node **a, t_stack_node **b);
 void					free_array(char **array);
 void					sa(t_stack_node **a, bool print);
 void					sb(t_stack_node **b, bool print);
@@ -64,6 +65,6 @@ void					push_to_a(t_stack_node **a, t_stack_node **b);
 bool					stack_sorted(t_stack_node *stack);
 void					free_stack(t_stack_node **a);
 void					sort_three(t_stack_node **a);
-t_stack_node	*find_max(t_stack_node **a);
+t_stack_node			*find_max(t_stack_node **a);
 
 #endif

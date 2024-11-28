@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:46:56 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 16:54:13 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:47:54 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	rra(t_stack_node **a, bool print)
 	last->prev = NULL;
 	*a = last;
 	if (print)
-		ft_putstr_fd("pa\n", 1);
+		ft_putstr_fd("rra\n", 1);
 }
