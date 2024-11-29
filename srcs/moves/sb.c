@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:59:24 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 12:48:11 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:57:28 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sb(t_stack_node **b, bool print)
 {
@@ -28,6 +28,6 @@ void	sb(t_stack_node **b, bool print)
 	node2->next = node1;
 	node1->prev = node2;
 	*b = node2;
-	if (print);
+	if (print)
 		ft_putstr_fd("sb\n", 1);
 }

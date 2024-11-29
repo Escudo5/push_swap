@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:03 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 13:09:44 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:44:30 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 bool	is_in_range(int index, int start, int end)
 {
@@ -48,7 +48,7 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 	int	start;
 	int	end;
 
-	total_numbers = ft_lstsize(*a);
+	total_numbers = ft_stacksize(*a);
 	block_size = total_numbers / 5;
 	start = 0;
 	end = block_size - 1;

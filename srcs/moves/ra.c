@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:30:26 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 12:47:37 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:36:12 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ra(t_stack_node **a, bool print)
 {

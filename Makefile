@@ -1,10 +1,10 @@
 # Variables de compilación
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./custom-libft
 LIBFT_DIR = ./custom-libft
 LIBFT = $(LIBFT_DIR)/libft.a
 SRCS = srcs/main.c srcs/algoritmo/index.c srcs/algoritmo/order_in_b.c srcs/algoritmo/sort_stacks.c \
-       srcs/input/free_array.c srcs/input/get_len.c srcs/input/is_dup.c srcs/input/is_in_range.c \
+       srcs/input/free_array.c srcs/input/get_len.c srcs/input/is_dup.c srcs/input/is_in_range_str.c \
        srcs/input/is_numeric.c srcs/input/validate_input.c srcs/moves/pa.c srcs/moves/pb.c srcs/moves/ra.c \
        srcs/moves/rb.c srcs/moves/rr.c srcs/moves/rra.c srcs/moves/rrb.c srcs/moves/rrr.c srcs/moves/sa.c \
        srcs/moves/sb.c srcs/moves/ss.c srcs/atol.c srcs/ft_split.c srcs/init_stack_a.c srcs/stack_utils.c

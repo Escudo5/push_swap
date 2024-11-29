@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:35:38 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 17:51:51 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:09:46 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	free_stack(t_stack_node **a)
 	while (*a)
 	{
 		temp = *a;
-		a = (*a)->next;
+		*a = (*a)->next;
 		free(temp);
 	}
 }
@@ -50,15 +50,15 @@ void	sort_three(t_stack_node **a)
 		sa(a, true);
 }
 
-t_stack_node	*find_max(t_stack_node **a)
+t_stack_node	*find_max(t_stack_node *a)
 {
 	t_stack_node *current;
 	t_stack_node *max_node;
 	
-	if (*a == NULL)
+	if (a == NULL)
 		return (NULL);
-	current = *a;
-	max_node = *a;
+	current = a;
+	max_node = a;
 	while (current != NULL)
 	{
 		if (current->nbr > max_node->nbr)
@@ -66,4 +66,15 @@ t_stack_node	*find_max(t_stack_node **a)
 		current = current->next;
 	}
 	return (max_node);
+}
+
+int ft_stacksize(t_stack_node *stack)
+{
+    int size = 0;
+    while (stack)
+    {
+        size++;
+        stack = stack->next;
+    }
+    return size;
 }

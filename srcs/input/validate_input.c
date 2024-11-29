@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   validate_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:22:45 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 13:08:23 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:49:59 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char	**split_input(int argc, char **argv, int *len)
 {
@@ -28,7 +28,7 @@ char	**split_input(int argc, char **argv, int *len)
 
 bool	is_valid(char *str)
 {
-	return (is_numeric(str) && is_in_range(str));
+	return (is_numeric(str) && is_in_range_str(str));
 }
 
 bool	has_dup(int *numbers, int len)

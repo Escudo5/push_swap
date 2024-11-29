@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   is_numeric.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:26:50 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 12:11:41 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:36:02 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 bool	is_numeric(const char *str)
 {

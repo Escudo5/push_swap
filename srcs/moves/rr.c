@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:43:21 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 12:47:50 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:36:16 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void rr(t_stack_node **a, t_stack_node **b, bool print)
 {

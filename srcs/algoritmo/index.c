@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 10:35:26 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 13:22:06 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:35:20 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 bool	unindexed(t_stack_node *a)
 {
