@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:35:38 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/29 13:09:46 by escudo5          ###   ########.fr       */
+/*   Updated: 2024/12/02 10:27:17 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ void	sort_three(t_stack_node **a)
 
 t_stack_node	*find_max(t_stack_node *a)
 {
-	t_stack_node *current;
-	t_stack_node *max_node;
-	
+	t_stack_node	*current;
+	t_stack_node	*max_node;
+
 	if (a == NULL)
 		return (NULL);
 	current = a;
@@ -68,13 +68,15 @@ t_stack_node	*find_max(t_stack_node *a)
 	return (max_node);
 }
 
-int ft_stacksize(t_stack_node *stack)
+int	ft_stacksize(t_stack_node *stack)
 {
-    int size = 0;
-    while (stack)
-    {
-        size++;
-        stack = stack->next;
-    }
-    return size;
+	int	size;
+
+	size = 0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
 }
