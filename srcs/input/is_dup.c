@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   is_dup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:37:30 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/25 11:11:02 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:35:59 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 bool	is_dup(int *numbers, int len)
 {

@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/12/09 17:36:58 by smarquez         ###   ########.fr       */
+=======
+/*   Updated: 2024/11/29 13:09:30 by escudo5          ###   ########.fr       */
+>>>>>>> d154dc834a0d0d6a3629d7e7a1f8e114c4a85f17
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +46,8 @@ bool					check_dup(char **input, int len);
 int						get_len(t_stack_node **a);
 bool					is_numeric(const char *str);
 bool					is_dup(int *numbers, int len);
-bool					is_in_range(const char *str);
+bool					is_in_range(int index, int start, int end);
+bool					is_in_range_str(const char *str);
 void					sort_stacks(t_stack_node **a, t_stack_node **b);
 void					free_array(char **array);
 void					sa(t_stack_node **a, bool print);
@@ -66,6 +71,7 @@ void					push_to_a(t_stack_node **a, t_stack_node **b);
 bool					stack_sorted(t_stack_node *stack);
 void					free_stack(t_stack_node **a);
 void					sort_three(t_stack_node **a);
-t_stack_node			*find_max(t_stack_node **a);
+t_stack_node			*find_max(t_stack_node *a);
+int 					ft_stacksize(t_stack_node *stack);
 
 #endif

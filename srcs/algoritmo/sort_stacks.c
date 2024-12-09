@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:03 by smarquez          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/12/09 18:11:20 by smarquez         ###   ########.fr       */
+=======
+/*   Updated: 2024/11/29 12:44:30 by escudo5          ###   ########.fr       */
+>>>>>>> d154dc834a0d0d6a3629d7e7a1f8e114c4a85f17
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +52,7 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 	int	start;
 	int	end;
 
-	total_numbers = ft_lstsize(*a);
+	total_numbers = ft_stacksize(*a);
 	block_size = total_numbers / 5;
 	start = 0;
 	end = block_size - 1;

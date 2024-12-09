@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:46:56 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 12:47:54 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:56:53 by escudo5          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	rra(t_stack_node **a, bool print)
 {
@@ -22,8 +22,8 @@ void	rra(t_stack_node **a, bool print)
 	last = *a;
 	while (last->next != NULL)
 		last = last->next;
-	second_last->next = NULL;
 	second_last = last->prev;
+	second_last->next = NULL;
 	last->next = *a;
 	(*a)->prev = last;
 	last->prev = NULL;

@@ -6,29 +6,34 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 10:22:45 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 13:08:23 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/12/02 11:12:37 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+
+#include "../push_swap.h"
 
 char	**split_input(int argc, char **argv, int *len)
 {
 	char	**input;
+	int		count;
 
 	if (argc == 2)
 		input = ft_split(argv[1], ' ');
 	else
 		input = argv + 1;
-	*len = 0;
-	while (input[*len])
-		(*len)++;
-	return (input);
+	count = 0;
+	while (input[count] != NULL)
+		count++;
+	*len = count;
+	if (argc == 2)
+		return (input);
+	return (argv + 1);
 }
 
 bool	is_valid(char *str)
 {
-	return (is_numeric(str) && is_in_range(str));
+	return (is_numeric(str) && is_in_range_str(str));
 }
 
 bool	has_dup(int *numbers, int len)

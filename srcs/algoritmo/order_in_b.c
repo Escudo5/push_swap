@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   order_in_b.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:57:41 by smarquez          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/12/09 17:37:45 by smarquez         ###   ########.fr       */
+=======
+/*   Updated: 2024/11/29 12:42:51 by escudo5          ###   ########.fr       */
+>>>>>>> d154dc834a0d0d6a3629d7e7a1f8e114c4a85f17
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +37,7 @@ void	move_largest_to_top(t_stack_node **b, int largest_index)
 	t_stack_node	*temp;
 
 	position = 0;
-	len = ft_lstsize(*b);
+	len = ft_stacksize(*b);
 	temp = *b;
 	while (temp && temp->index != largest_index)
 	{

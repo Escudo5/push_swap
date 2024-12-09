@@ -5,13 +5,17 @@
 t_stack_node	*find_last(t_stack_node *a)
 {
 	if (!a)
-		return ;
+		return NULL;
 	while (a->next)
 		a = a->next;
 	return (a);
 }
 
+<<<<<<< HEAD
  void	append_node(t_stack_node **a, int n)
+=======
+void	append_node(t_stack_node **a, int n)
+>>>>>>> d154dc834a0d0d6a3629d7e7a1f8e114c4a85f17
 {
 	t_stack_node	*node;
 	t_stack_node	*last_node;
