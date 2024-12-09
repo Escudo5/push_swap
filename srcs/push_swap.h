@@ -3,16 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/12/09 17:36:58 by smarquez         ###   ########.fr       */
-=======
-/*   Updated: 2024/11/29 13:09:30 by escudo5          ###   ########.fr       */
->>>>>>> d154dc834a0d0d6a3629d7e7a1f8e114c4a85f17
+/*   Updated: 2024/12/09 18:58:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
