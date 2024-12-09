@@ -6,11 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:57:41 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/27 17:27:26 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:37:45 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	find_largest_index(t_stack_node *b)
 {

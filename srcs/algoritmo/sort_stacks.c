@@ -6,11 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:03 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 13:09:44 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/12/09 18:11:20 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 bool	is_in_range(int index, int start, int end)
 {

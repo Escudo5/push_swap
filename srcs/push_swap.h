@@ -6,14 +6,14 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:36 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 13:38:32 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:36:58 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./custom-libft/libft.h"
+# include "../custom-libft/libft.h"
 # include <limits.h>
 # include <stdbool.h>
 
@@ -31,9 +31,9 @@ typedef struct s_stack_node
 
 void					init_stack_a(t_stack_node **a, int *numbers,
 							int len);
-static void				append_node(t_stack_node **a, int n);
+ void				append_node(t_stack_node **a, int n);
 t_stack_node			*find_last(t_stack_node *a);
-static long				ft_atol(const char *nptr);
+ long				ft_atol(const char *nptr);
 char					**split_input(int argc, char **argv, int *len);
 bool					is_valid(char *str);
 bool					has_dup(int *numbers, int len);

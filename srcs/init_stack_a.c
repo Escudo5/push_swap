@@ -11,7 +11,7 @@ t_stack_node	*find_last(t_stack_node *a)
 	return (a);
 }
 
-static void	append_node(t_stack_node **a, int n)
+ void	append_node(t_stack_node **a, int n)
 {
 	t_stack_node	*node;
 	t_stack_node	*last_node;
