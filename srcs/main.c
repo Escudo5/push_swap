@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:44:15 by smarquez          #+#    #+#             */
-/*   Updated: 2024/11/28 13:39:11 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/12/19 16:18:33 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 	input = split_input(argc, argv, &len);
 	if (check_dup(input, len))
 	{
-		ft_putstr_fd("Error: Duplicates found in input.\n", 2);
+		ft_putstr_fd("Error\n", 2);
 		return (1);
 	}
 	len = 0;

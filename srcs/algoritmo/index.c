@@ -31,6 +31,7 @@ t_stack_node	*find_smallest_unindexed(t_stack_node *a)
 	smallest_node = NULL;
 	while (a)
 	{
+
 		if (a->index == -1 && (!smallest_node || a->nbr < smallest_node->nbr))
 			smallest_node = a;
 		a = a->next;

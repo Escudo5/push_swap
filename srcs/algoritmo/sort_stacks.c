@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:16:03 by smarquez          #+#    #+#             */
-/*   Updated: 2024/12/09 18:59:16 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/12/19 16:02:52 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,16 @@ bool	has_elements_in_range(t_stack_node *a, int start, int end)
 {
 	while (a)
 	{
+
 		if (is_in_range(a->index, start, end))
+		{
 			return (true);
+		}
+		printf("valor a->:%d\n", a->nbr);	
 		a = a->next;
 	}
+	printf("hoola\n");	
+
 	return (false);
 }
 
@@ -35,6 +41,7 @@ void	push_range_to_b(t_stack_node **a, t_stack_node **b, int start, int end)
 		return ;
 	while (has_elements_in_range(*a, start, end))
 	{
+
 		if (is_in_range((*a)->index, start, end))
 			pb(a, b, true);
 		else
